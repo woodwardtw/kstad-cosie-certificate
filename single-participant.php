@@ -44,6 +44,8 @@ do_action( 'suffice_before_body_content' ); ?>
 			// 	echo "</div>";
 			// }
 			acf_form($args);
+			$gravity_id = get_field('gravity_form_id', 'options');
+			gravity_form( $gravity_id, false ,false , false, false, false, 1, true );
 
 			get_template_part( 'template-parts/content', get_post_format() );
 

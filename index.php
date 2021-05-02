@@ -186,6 +186,28 @@ function prompt_4_field_label($field) {
         
     }
 
+/**
+ * THIS GIVES YOU THE OPTION TO PICK FORMS FROM THE OPTIONS AREA
+ * Populate ACF select field options with Gravity Forms forms
+ * from https://gist.github.com/psaikali/2b29e6e83f50718625af27c2958c828f
+ */
+function acf_populate_gf_forms_ids( $field ) {
+  //write_log($field);
+  if ( class_exists( 'GFFormsModel' ) ) {
+    $choices = [];
+    foreach ( \GFFormsModel::get_forms() as $form ) {
+      $choices[ $form->id ] = $form->title;
+    }
+    $field['choices'] = $choices;
+  }
+
+  return $field;
+}
+
+add_filter( 'acf/load_field/key=field_60893b01a8896', 'acf_populate_gf_forms_ids' );
+
+
+
 //participant custom post type
 
 // Register Custom Post Type participant

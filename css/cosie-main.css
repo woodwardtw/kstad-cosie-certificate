@@ -80,3 +80,8 @@ p.description, p:empty:before, p:empty  {
 	display: block;
 }
 
+
+/*hide pdf button*/
+.hidden{
+	display: none;
+}

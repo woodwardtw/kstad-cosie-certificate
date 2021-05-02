@@ -153,6 +153,32 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_60893b01a8896",
+            "label": "Gravity Form for PDF",
+            "name": "gravity_form_id",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "PDF maker",
+                "2": "register",
+                "1": "test"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -172,5 +198,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616768802
+    "modified": 1619607638
 }
